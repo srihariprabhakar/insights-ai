@@ -1,25 +1,27 @@
 # Insights AI
 
-Insights AI is an operational intelligence demo built using DigitalOcean AI services.
+Insights AI is an operational intelligence demo built using:
 
-The application demonstrates how enterprise operational workflows can dynamically route AI requests to different models depending on workload type, reasoning complexity, latency requirements, and optimization strategy.
+- DigitalOcean App Platform
+- DigitalOcean Inference Router
+- DigitalOcean Serverless Inference
+- Streamlit
 
-Instead of hardcoding a single model, Insights AI uses DigitalOcean Inference Router to intelligently orchestrate model selection across operational workflows such as:
+The application demonstrates task-aware AI routing for enterprise operational workflows such as:
 
 - Event summarization
 - Severity classification
 - Manager recommendations
-- Executive operational reporting
+- Executive reporting
 
----
+Instead of hardcoding a single model, requests are dynamically routed through DigitalOcean Inference Router based on workload type and optimization strategy.
 
-# Architecture
+## Architecture
 
 ```text
 Operational Events
         ↓
 Insights AI UI
-(App Platform / Streamlit)
         ↓
 Insights Demo Router
         ↓
